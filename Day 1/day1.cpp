@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//helper function to read input as integer vector
+//helper function to convert file input to int vector
 vector<int>fileToVector(const char *name)
 {
     vector<int> result;
@@ -27,9 +27,22 @@ vector<int>fileToVector(const char *name)
     return result;
 }
 
+//count the number of times a depth measurement increases from the previous measurement
+int getIncreased(vector<int> depths) 
+{
+    int increasedCounts = 0;
+    for (int i = 1; i < depths.size(); i++)
+    {
+        if(depths[i] > depths[i - 1])
+        {
+            increasedCounts++;
+        }
+    }
+    return increasedCounts;
+}
 
 //calculate the number of times the sum of measurements in this sliding window increases from the previous sum
-int getIncreased(vector<int> depths) 
+int getIncreased2(vector<int> depths) 
 {
     int increasedCounts = 0;
     for (int i = 3; i < depths.size(); i++)
@@ -45,5 +58,7 @@ int main()
 {
     vector<int> depths = fileToVector("input.txt");
     int result = getIncreased(depths);
+    int result2 = getIncreased2(depths);
     cout << "Result: " << result << endl;
+    cout << "Result2: " << result2 << endl;
 }
