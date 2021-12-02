@@ -61,7 +61,8 @@ pair<int, int> part_two(vector<Indication> input_directions)
 	pair<int, int> coordinates;
 	coordinates.first = 0;
 	coordinates.second = 0;
-
+	
+	//adjusting horizontal position and depth using input directions and aim
 	for (Indication indication: input_directions) 
 	{
 		if (indication.direction == "down") 
