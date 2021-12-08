@@ -10,6 +10,7 @@
 
 //----------------------------------------------------------------
 // Brute force solution
+// Elimiates all impossible segments until there is only one possible remaining segment for each line of input
 // Requires C++14 Compilation
 //----------------------------------------------------------------
 
