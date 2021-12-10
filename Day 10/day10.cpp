@@ -9,7 +9,7 @@
 Defining macros to be able to switch from part 1 to part 2 easily
 */
 
-#define PART 1 			// define as 1 to sum part 1 and 2 for part 2
+#define PART 1 			// define as 1 to sum part 1
 unsigned long long int points = 0;
 
 #if PART == 1
