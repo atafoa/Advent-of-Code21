@@ -44,7 +44,7 @@ int countUnique() {
         if (i > 0 && points[i - 1][0] == points[i][0] && points[i - 1][1] == points[i][1]); // this is a dupe
         else ++uniquePts; // not a dupe, add.
     }
-    return uniquePts;
+    return uniquePts-1;
 }
 
 static inline int max(int a, int b) { return (a > b) ? a : b; }
